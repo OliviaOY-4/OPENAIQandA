@@ -5,8 +5,6 @@ import { Configuration, OpenAIApi } from 'openai'
 
 dotenv.config()
 
-console.log(process.env.OPENAI_API_KEY)
-
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -46,5 +44,4 @@ app.post('/', async (req, res) => {
     res.status(500).send(error || 'Something went wrong');
   }
 })
-
 app.listen(5010,()=>console.log('Server is running on port http://localhost:5010'));
